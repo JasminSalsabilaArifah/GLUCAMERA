@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GlueCamera</string>
+    <string name="gluecamera">GLUECAMERA</string>
+    <string name="tutorial">Cara pemakaian</string>
+    <string name="ambil_gambar">Ambil Gambar</string>
+    <string name="result">Result</string>
+    <string name="kadar_gula">Kadar Gula :</string>
+    <string name="keterangan">Keterangan :</string>
+    <string name="ambil_lagi">Ambil Lagi</string>
+</resources>
