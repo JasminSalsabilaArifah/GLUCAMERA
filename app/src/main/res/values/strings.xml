@@ -1,10 +1,19 @@
 <resources>
     <string name="app_name">GlueCamera</string>
     <string name="gluecamera">GLUECAMERA</string>
-    <string name="tutorial">Cara pemakaian</string>
-    <string name="ambil_gambar">Ambil Gambar</string>
-    <string name="result">Result</string>
-    <string name="kadar_gula">Kadar Gula :</string>
-    <string name="keterangan">Keterangan :</string>
-    <string name="ambil_lagi">Ambil Lagi</string>
+    <string name="tittle">Welcome to GluCamera!</string>
+    <string name="description">Want to know the sugar content in your food?\ntake a picture and see how much sugar it contains</string>
+    <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+    <string name="copyright">© C23-PC692</string>
+    <string name="trial">TRIAL</string>
+    <string name="tittle2">Want to use GluCamera?</string>
+    <string name="message">Enter your data first</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="titleSignup">Complete your data</string>
+    <string name="name">Name</string>
+    <string name="kadar_gula">Sugar level : %1$s</string>
+    <string name="ambil_gambar">Take picture</string>
+    <string name="keterangan">information : \n%1$s</string>
 </resources>

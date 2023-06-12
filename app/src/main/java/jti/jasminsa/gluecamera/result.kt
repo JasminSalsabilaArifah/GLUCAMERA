@@ -1,12 +1,16 @@
 package jti.jasminsa.gluecamera
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
+import androidx.activity.result.contract.ActivityResultContracts
 import jti.jasminsa.gluecamera.databinding.ActivityResultBinding
+import java.io.ByteArrayOutputStream
 
 class result : AppCompatActivity() {
 
@@ -28,6 +32,20 @@ class result : AppCompatActivity() {
 
         binding.imageView.setImageBitmap(bitmap)
 
+        binding.button.setOnClickListener { startTakePhoto() }
+    }
 
+    private val launcherIntentCamera = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) {
+        if (it.resultCode == RESULT_OK) {
+            val imageBitmap = it.data?.extras?.get("data") as Bitmap
+            binding.imageView.setImageBitmap(imageBitmap)
+        }
+    }
+
+    private fun startTakePhoto() {
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        launcherIntentCamera.launch(intent)
     }
 }

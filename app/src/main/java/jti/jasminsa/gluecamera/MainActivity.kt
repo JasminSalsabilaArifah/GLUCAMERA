@@ -1,6 +1,7 @@
 package jti.jasminsa.gluecamera
 
 import android.Manifest
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
@@ -53,6 +55,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        playAnimation()
+
         if (!allPermissionsGranted()) {
             ActivityCompat.requestPermissions(
                 this,
@@ -60,7 +64,14 @@ class MainActivity : AppCompatActivity() {
                 REQUEST_CODE_PERMISSIONS
             )
         }
-        binding.btnAmbilGambar.setOnClickListener { startTakePhoto() }
+
+        binding.btnTrial.setOnClickListener { startTakePhoto() }
+        binding.btnLogin.setOnClickListener {
+            val moveIntent = Intent(this@MainActivity, LoginActivity::class.java)
+            startActivity(moveIntent) }
+        binding.btnSignup.setOnClickListener {
+            val moveIntent = Intent(this@MainActivity, SignUpActivity::class.java)
+            startActivity(moveIntent) }
     }
 
     private val launcherIntentCamera = registerForActivityResult(
@@ -81,5 +92,13 @@ class MainActivity : AppCompatActivity() {
     private fun startTakePhoto() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         launcherIntentCamera.launch(intent)
+    }
+
+    private fun playAnimation() {
+        ObjectAnimator.ofFloat(binding.ivlogo1, View.TRANSLATION_X, -30f, 30f).apply {
+            duration = 6000
+            repeatCount = ObjectAnimator.INFINITE
+            repeatMode = ObjectAnimator.REVERSE
+        }.start()
     }
 }
