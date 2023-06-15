@@ -1,16 +1,14 @@
-package jti.jasminsa.gluecamera
+package jti.jasminsa.gluecamera.ui
 
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import jti.jasminsa.gluecamera.databinding.ActivityResultBinding
-import java.io.ByteArrayOutputStream
 
 class result : AppCompatActivity() {
 

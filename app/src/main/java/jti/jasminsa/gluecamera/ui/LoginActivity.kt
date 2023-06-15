@@ -1,4 +1,4 @@
-package jti.jasminsa.gluecamera
+package jti.jasminsa.gluecamera.ui
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.firebase.auth.FirebaseAuth
 import jti.jasminsa.gluecamera.databinding.ActivityLoginBinding
-import jti.jasminsa.gluecamera.databinding.ActivityMainBinding
 import java.io.ByteArrayOutputStream
 
 class LoginActivity : AppCompatActivity() {

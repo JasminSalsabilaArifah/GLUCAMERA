@@ -1,4 +1,4 @@
-package jti.jasminsa.gluecamera
+package jti.jasminsa.gluecamera.ui
 
 import android.Manifest
 import android.animation.ObjectAnimator
@@ -15,8 +15,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import jti.jasminsa.gluecamera.databinding.ActivityMainBinding
-import jti.jasminsa.gluecamera.result.Companion.IMAGE
-import jti.jasminsa.gluecamera.ui.signup.SignUpActivity
+import jti.jasminsa.gluecamera.ui.result.Companion.IMAGE
 import java.io.ByteArrayOutputStream
 
 class MainActivity : AppCompatActivity() {

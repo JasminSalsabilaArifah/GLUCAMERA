@@ -1,14 +1,11 @@
-package jti.jasminsa.gluecamera.ui.signup
+package jti.jasminsa.gluecamera.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import jti.jasminsa.gluecamera.R
-import jti.jasminsa.gluecamera.databinding.ActivityLoginBinding
 import jti.jasminsa.gluecamera.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
