@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "608351919603",
-    "project_id": "gluecamera",
-    "storage_bucket": "gluecamera.appspot.com"
+    "project_number": "374834637354",
+    "project_id": "gluecamera-77440",
+    "storage_bucket": "gluecamera-77440.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:608351919603:android:14f0fc88bf74ee4cb48686",
+        "mobilesdk_app_id": "1:374834637354:android:795eb653a9f6dc8a24b153",
         "android_client_info": {
           "package_name": "jti.jasminsa.gluecamera"
         }
       },
       "oauth_client": [
         {
-          "client_id": "608351919603-rv1j07c6j3dpaecns782b1l439e1e8ss.apps.googleusercontent.com",
+          "client_id": "374834637354-v6ji0hbanls9afvi0q8jb36a7hf32rla.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCoihSAGj_60SKu_yt6YR9WBkyhSh_xML4"
+          "current_key": "AIzaSyAPXHqlFfYbMeVTq7Wc3l2z8L9lQ-9lEmA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "608351919603-rv1j07c6j3dpaecns782b1l439e1e8ss.apps.googleusercontent.com",
+              "client_id": "374834637354-v6ji0hbanls9afvi0q8jb36a7hf32rla.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

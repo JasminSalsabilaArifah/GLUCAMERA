@@ -16,6 +16,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import jti.jasminsa.gluecamera.databinding.ActivityMainBinding
 import jti.jasminsa.gluecamera.result.Companion.IMAGE
+import jti.jasminsa.gluecamera.ui.signup.SignUpActivity
 import java.io.ByteArrayOutputStream
 
 class MainActivity : AppCompatActivity() {
