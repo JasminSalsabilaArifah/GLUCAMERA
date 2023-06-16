@@ -4,7 +4,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-
 //class ApiConfig {
 //    fun getApiService(): ApiService {
 //        val loggingInterceptor =
@@ -13,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 //            .addInterceptor(loggingInterceptor)
 //            .build()
 //        val retrofit = Retrofit.Builder()
-//            .baseUrl("https://story-api.dicoding.dev/")
+//            .baseUrl("http://34.101.167.10:500/")
 //            .addConverterFactory(GsonConverterFactory.create())
 //            .client(client)
 //            .build()
