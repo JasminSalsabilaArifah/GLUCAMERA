@@ -13,5 +13,5 @@ By capturing an image of the food, Glucamera provides real-time information abou
 | Satria Nugraha                | Cloud Computing    | C172DSX1998  |
 | Jasmin Salsabila Arifah       | Mobile Developer   | A066DSY2297  |
 
-Hasil dari Machine Learning dalam bentuk TF.Lite terdapat pada link drive karena ukuran yang melebihi kapasitas GitHub
+The Model Result from Machine Learning in form of TF.Lite is placed on drive link because the size is unsuitable with GitHub
 https://drive.google.com/drive/folders/1sTqCnROGbq2jxa3GXZah-n70nY5-8SmN?usp=sharing 
