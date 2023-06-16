@@ -1,16 +1,11 @@
 package jti.jasminsa.gluecamera.ui
 
 import android.content.Intent
-import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
-import android.util.Log
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import com.google.firebase.auth.FirebaseAuth
 import jti.jasminsa.gluecamera.databinding.ActivityLoginBinding
-import java.io.ByteArrayOutputStream
 
 class LoginActivity : AppCompatActivity() {
 
@@ -33,29 +28,10 @@ class LoginActivity : AppCompatActivity() {
         val password = binding.etPassword.text.toString()
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) {
             if (it.isSuccessful) {
-                val intent = Intent(this, result::class.java)
+                val intent = Intent(this, ResultActivity::class.java)
                 startActivity(intent)
             } else
                 Toast.makeText(this, "Log In failed ", Toast.LENGTH_SHORT).show()
         }
     }
-//    private fun startTakePhoto() {
-//        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-//        launcherIntentCamera.launch(intent)
-//    }
-//
-//    private val launcherIntentCamera = registerForActivityResult(
-//        ActivityResultContracts.StartActivityForResult()
-//    ) {
-//        if (it.resultCode == RESULT_OK) {
-//            val imageBitmap = it.data?.extras?.get("data") as Bitmap
-//            val stream = ByteArrayOutputStream()
-//            imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
-//            val byteArray = stream.toByteArray()
-//            Log.e("TAG", "findUser 1: ${byteArray}")
-//            val intent = Intent(this, result::class.java)
-//            intent.putExtra(result.IMAGE, byteArray)
-//            startActivity(intent)
-//        }
-//    }
 }

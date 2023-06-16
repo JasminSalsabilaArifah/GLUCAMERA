@@ -14,12 +14,11 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.startActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import jti.jasminsa.gluecamera.databinding.ActivityMainBinding
-import jti.jasminsa.gluecamera.ui.result.Companion.IMAGE
+import jti.jasminsa.gluecamera.ui.ResultActivity.Companion.IMAGE
 import java.io.ByteArrayOutputStream
 
 class MainActivity : AppCompatActivity() {
@@ -63,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
         run(){
             if(auth.currentUser != null){
-                val intent = Intent(this@MainActivity, result::class.java)
+                val intent = Intent(this@MainActivity, ResultActivity::class.java)
                 startActivity(intent)
             }
         }
@@ -96,7 +95,7 @@ class MainActivity : AppCompatActivity() {
             imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
             val byteArray = stream.toByteArray()
             Log.e("TAG", "findUser 1: ${byteArray}")
-            val intent = Intent(this@MainActivity, result::class.java)
+            val intent = Intent(this@MainActivity, ResultActivity::class.java)
             intent.putExtra(IMAGE, byteArray)
             startActivity(intent)
         }

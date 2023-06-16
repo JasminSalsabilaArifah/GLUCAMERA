@@ -16,4 +16,7 @@
     <string name="kadar_gula">Sugar level : %1$s</string>
     <string name="ambil_gambar">Take picture</string>
     <string name="keterangan">information : \n%1$s</string>
+    <string name="nama_autor">Name</string>
+    <string name="email_authot">Email</string>
+    <string name="logout">Logout</string>
 </resources>
