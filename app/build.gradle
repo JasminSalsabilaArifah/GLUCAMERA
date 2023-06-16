@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -38,6 +39,8 @@ android {
 }
 
 dependencies {
+
+    
 
     implementation("androidx.multidex:multidex:2.0.1")
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

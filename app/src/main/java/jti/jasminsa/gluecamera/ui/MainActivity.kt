@@ -14,6 +14,10 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import jti.jasminsa.gluecamera.databinding.ActivityMainBinding
 import jti.jasminsa.gluecamera.ui.result.Companion.IMAGE
 import java.io.ByteArrayOutputStream
@@ -21,6 +25,7 @@ import java.io.ByteArrayOutputStream
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var auth: FirebaseAuth
 
     companion object {
         private val REQUIRED_PERMISSIONS =
@@ -54,6 +59,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        auth = Firebase.auth
+
+        run(){
+            if(auth.currentUser != null){
+                val intent = Intent(this@MainActivity, result::class.java)
+                startActivity(intent)
+            }
+        }
 
         playAnimation()
 

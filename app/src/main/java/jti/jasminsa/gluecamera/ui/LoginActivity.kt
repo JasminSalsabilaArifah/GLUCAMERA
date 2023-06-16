@@ -33,30 +33,29 @@ class LoginActivity : AppCompatActivity() {
         val password = binding.etPassword.text.toString()
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) {
             if (it.isSuccessful) {
-                startTakePhoto()
-                Toast.makeText(this, "Successfully LoggedIn", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, result::class.java)
+                startActivity(intent)
             } else
                 Toast.makeText(this, "Log In failed ", Toast.LENGTH_SHORT).show()
         }
     }
-
-    private fun startTakePhoto() {
-        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        launcherIntentCamera.launch(intent)
-    }
-
-    private val launcherIntentCamera = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) {
-        if (it.resultCode == RESULT_OK) {
-            val imageBitmap = it.data?.extras?.get("data") as Bitmap
-            val stream = ByteArrayOutputStream()
-            imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
-            val byteArray = stream.toByteArray()
-            Log.e("TAG", "findUser 1: ${byteArray}")
-            val intent = Intent(this, result::class.java)
-            intent.putExtra(result.IMAGE, byteArray)
-            startActivity(intent)
-        }
-    }
+//    private fun startTakePhoto() {
+//        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+//        launcherIntentCamera.launch(intent)
+//    }
+//
+//    private val launcherIntentCamera = registerForActivityResult(
+//        ActivityResultContracts.StartActivityForResult()
+//    ) {
+//        if (it.resultCode == RESULT_OK) {
+//            val imageBitmap = it.data?.extras?.get("data") as Bitmap
+//            val stream = ByteArrayOutputStream()
+//            imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
+//            val byteArray = stream.toByteArray()
+//            Log.e("TAG", "findUser 1: ${byteArray}")
+//            val intent = Intent(this, result::class.java)
+//            intent.putExtra(result.IMAGE, byteArray)
+//            startActivity(intent)
+//        }
+//    }
 }
